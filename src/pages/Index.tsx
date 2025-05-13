@@ -1,5 +1,4 @@
-
-import { medical, scissors, fileText, briefcase, mapPin, clock, star } from "lucide-react";
+import { Medical, Scissors, FileText, Briefcase, MapPin, Clock, Star } from "lucide-react";
 import { useState } from "react";
 import CategoryCard from "../components/CategoryCard";
 import Navbar from "../components/Navbar";
@@ -12,10 +11,10 @@ const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const categories = [
-    { title: "Médico", icon: medical, color: "bg-red-500", path: "/search?category=medical" },
-    { title: "Salão de Beleza", icon: scissors, color: "bg-purple-500", path: "/search?category=salon" },
-    { title: "Cartório", icon: fileText, color: "bg-green-500", path: "/search?category=notary" },
-    { title: "Despachante", icon: briefcase, color: "bg-yellow-500", path: "/search?category=dispatcher" },
+    { title: "Médico", icon: Medical, color: "bg-red-500", path: "/search?category=medical" },
+    { title: "Salão de Beleza", icon: Scissors, color: "bg-purple-500", path: "/search?category=salon" },
+    { title: "Cartório", icon: FileText, color: "bg-green-500", path: "/search?category=notary" },
+    { title: "Despachante", icon: Briefcase, color: "bg-yellow-500", path: "/search?category=dispatcher" },
   ];
 
   const featuredProviders = [
