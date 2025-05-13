@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { ChevronDown, MapPin, Filter, Clock } from "lucide-react";
+import { ChevronDown, MapPin, Filter, Clock, Star } from "lucide-react";
 import Navbar from "../components/Navbar";
 import BottomNav from "../components/BottomNav";
 import SearchBar from "../components/SearchBar";
@@ -227,7 +227,7 @@ const Search = () => {
                 onClick={() => handleFilterChange("rating")}
               >
                 <div className="flex items-center">
-                  <star className="w-4 h-4 mr-1" />
+                  <Star className="w-4 h-4 mr-1" />
                   <p>Melhor avaliados</p>
                 </div>
               </div>
@@ -271,3 +271,4 @@ const Search = () => {
 };
 
 export default Search;
+
