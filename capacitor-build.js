@@ -3,6 +3,11 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+// Configuration
+const appName = 'fila-zero-facil';
+const appId = 'app.lovable.57fdfdaeaba644bfa52cb0d8b459a277';
+const webDir = 'dist';
+
 // Check if this is the first run
 const isFirstRun = !fs.existsSync(path.join(__dirname, 'android'));
 
@@ -13,7 +18,7 @@ execSync('npm run build', { stdio: 'inherit' });
 if (isFirstRun) {
   // Initialize Capacitor
   console.log('Initializing Capacitor...');
-  execSync('npx cap init fila-zero-facil app.lovable.57fdfdaeaba644bfa52cb0d8b459a277 --web-dir dist', { stdio: 'inherit' });
+  execSync(`npx cap init ${appName} ${appId} --web-dir ${webDir}`, { stdio: 'inherit' });
 
   // Add Android platform
   console.log('Adding Android platform...');
